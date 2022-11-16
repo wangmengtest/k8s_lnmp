@@ -1,0 +1,18 @@
+{
+    "name": "vhall-component/photosignin",
+    "description": "照片签到组件",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "王广利",
+            "email": "guangli.wang@vhall.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload" : {
+        "psr-4" : {
+            "vhallComponent\\photosignin\\": "src"
+        }
+    }
+}

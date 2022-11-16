@@ -1,0 +1,19 @@
+{
+  "name": "vhall-component/common",
+  "description": "公共组件",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "刘祥亮",
+      "email": "xiangliang.liu@vhall.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload" : {
+    "psr-4" : {
+      "vhallComponent\\common\\": "src"
+    }
+  },
+  "require": {}
+}

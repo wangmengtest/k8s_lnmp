@@ -1,0 +1,19 @@
+{
+  "name": "vhall-component/chat",
+  "description": "聊天组件",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "刘祥亮",
+      "email": "xiangliang.liu@vhall.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload" : {
+    "psr-4" : {
+      "vhallComponent\\chat\\": "src"
+    }
+  },
+  "require": {}
+}

@@ -1,0 +1,19 @@
+{
+    "name": "vhall-component/room",
+    "description": "房间组件",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "杨金",
+            "email": "jin.yang@vhall.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload" : {
+        "psr-4" : {
+            "vhallComponent\\room\\": "src"
+        }
+    },
+    "require": {}
+}

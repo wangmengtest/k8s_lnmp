@@ -1,0 +1,19 @@
+{
+    "name": "vhall-component/anchor-manage",
+    "description": "主播管理组件",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "杨伟",
+            "email": "wei.yang@vhall.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload" : {
+        "psr-4" : {
+            "vhallComponent\\anchorManage\\": "src"
+        }
+    },
+    "require": {}
+}

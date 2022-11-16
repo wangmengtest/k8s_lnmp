@@ -1,0 +1,19 @@
+{
+  "name": "vhall-component/tag",
+  "description": "标签组件",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "刘祥亮",
+      "email": "xiangliang.liu@vhall.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload" : {
+    "psr-4" : {
+      "vhallComponent\\tag\\": "src"
+    }
+  },
+  "require": {}
+}

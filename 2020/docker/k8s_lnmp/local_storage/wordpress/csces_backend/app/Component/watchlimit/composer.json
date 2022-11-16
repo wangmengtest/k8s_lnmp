@@ -1,0 +1,20 @@
+{
+  "name": "vhall-component/watchlimit",
+  "description": "观看限制组件",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "张建伟",
+      "email": "jianwei1.zhang@vhall.com"
+    }
+  ],
+
+  "minimum-stability": "dev",
+  "autoload" : {
+    "psr-4" : {
+      "vhallComponent\\watchlimit\\": "src"
+    }
+  },
+  "require": {}
+}

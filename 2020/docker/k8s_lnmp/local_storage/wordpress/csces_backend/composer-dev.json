@@ -1,0 +1,279 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.0",
+        "aliyuncs/oss-sdk-php": "v2.4.1",
+        "fideloper/proxy": "4.4.1",
+        "fruitcake/laravel-cors": "v2.0.4",
+        "guzzlehttp/guzzle": "7.3.0",
+        "laravel/framework": "v8.44.0",
+        "laravel/tinker": "v2.6.1",
+        "phpoffice/phpspreadsheet": "1.18.0",
+        "predis/predis": "v1.1.7",
+        "vhall-component/access": "dev-master",
+        "vhall-component/account": "dev-master",
+        "vhall-component/action": "dev-master",
+        "vhall-component/admin": "dev-master",
+        "vhall-component/anchor-manage": "^1.0",
+        "vhall-component/broadcast": "dev-master",
+        "vhall-component/chat": "dev-master",
+        "vhall-component/common": "dev-master",
+        "vhall-component/config": "dev-master",
+        "vhall-component/cut": "dev-master",
+        "vhall-component/decouple": "dev-master",
+        "vhall-component/diypage": "dev-master",
+        "vhall-component/document": "dev-master",
+        "vhall-component/exam": "dev-master",
+        "vhall-component/export": "dev-master",
+        "vhall-component/filter-word": "^3.5",
+        "vhall-component/gift": "dev-master",
+        "vhall-component/goods": "dev-master",
+        "vhall-component/i18n": "dev-master",
+        "vhall-component/invitecard": "dev-master",
+        "vhall-component/lottery": "dev-master",
+        "vhall-component/menu": "dev-master",
+        "vhall-component/order": "dev-master",
+        "vhall-component/paas": "dev-master",
+        "vhall-component/pay": "dev-master",
+        "vhall-component/pendant": "dev-master",
+        "vhall-component/perfctl": "dev-master",
+        "vhall-component/photosignin": "^3.5",
+        "vhall-component/publicforward": "dev-master",
+        "vhall-component/qa": "dev-master",
+        "vhall-component/question": "dev-master",
+        "vhall-component/record": "dev-master",
+        "vhall-component/redpacket": "dev-master",
+        "vhall-component/reward": "dev-master",
+        "vhall-component/room": "dev-master",
+        "vhall-component/roomlike": "dev-master",
+        "vhall-component/scrolling": "dev-master",
+        "vhall-component/sign": "dev-master",
+        "vhall-component/sms": "dev-master",
+        "vhall-component/tag": "dev-master",
+        "vhall-component/vote": "dev-master",
+        "vhall-component/watchlimit": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Vss\\": "vss/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        },
+        "classmap": [
+            "library/Sms"
+        ],
+        "files": [
+            "library/Helper.php",
+            "library/Sms.php",
+            "config/deprecated.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan generator:init --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ],
+        "code-fmt": "./vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --config .php_cs"
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/anchor-manage.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/photosignin.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/filter-word.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/decouple.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/i18n.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/access.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/account.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/action.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/admin.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/broadcast.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/chat.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/common.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/config.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/cut.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/diypage.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/document.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/exam.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/export.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/gift.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/goods.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/invitecard.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/lottery.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/menu.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/order.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/paas.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/pay.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/perfctl.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/publicforward.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/qa.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/question.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/record.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/redpacket.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/reward.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/room.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/roomlike.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/scrolling.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/sign.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/sms.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/tag.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/vote.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/watchlimit.git"
+        },
+        {
+            "type": "git",
+            "url": "git@chandao.ops.vhall.com:vhall_pass_vss/webservice/pendant.git"
+        }
+    ]
+}

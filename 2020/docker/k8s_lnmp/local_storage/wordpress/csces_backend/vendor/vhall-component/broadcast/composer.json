@@ -1,0 +1,19 @@
+{
+  "name": "vhall-component/broadcast",
+  "description": "转播组件",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "刘祥亮",
+      "email": "xiangliang.liu@vhall.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload" : {
+    "psr-4" : {
+      "vhallComponent\\broadcast\\": "src"
+    }
+  },
+  "require": {}
+}

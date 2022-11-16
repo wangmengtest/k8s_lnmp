@@ -1,0 +1,19 @@
+{
+  "name": "vhall-component/action",
+  "description": "管理员角色行为权限组件",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "刘祥亮",
+      "email": "xiangliang.liu@vhall.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload" : {
+    "psr-4" : {
+      "vhallComponent\\action\\": "src"
+    }
+  },
+  "require": {}
+}

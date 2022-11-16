@@ -1,0 +1,20 @@
+{
+  "name": "vhall-component/document",
+  "description": "文档组件",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "刘祥亮",
+      "email": "xiangliang.liu@vhall.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload" : {
+    "psr-4" : {
+      "vhallComponent\\document\\": "src"
+    }
+  },
+  "require" : {}
+
+}

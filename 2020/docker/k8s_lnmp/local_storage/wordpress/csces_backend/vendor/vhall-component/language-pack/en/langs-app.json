@@ -1,0 +1,17 @@
+{
+  "login_view_prompt_nickname": "Enter your nickname",
+  "login_view_action_get_code": "Get verification code",
+  "login_view_error_invalid_nickname_empty": "Nickname is required.",
+  "login_view_error_invalid_nickname": "Special characters are not allowed in nickname",
+  "login_view_error_invalid_nickname_length": "Maximum length is 16 characters",
+  "login_view_error_invalid_phone_empty": "Phone number is required",
+  "login_view_error_invalid_phone": "Incorrect phone number format",
+  "login_view_error_invalid_code_empty": "Verification code is required.",
+  "login_view_prompt_phone": "Enter your phone number",
+  "login_view_prompt_code": "Enter your verification code",
+  "login_view_action_sign_in": "Login",
+  "login_view_send_msg_success": "Send success",
+  "login_view_phone_login": "login with phone",
+  "mine_clear_cache": "Clear cache",
+  "main_list_viewer": "Me is viewer"
+}

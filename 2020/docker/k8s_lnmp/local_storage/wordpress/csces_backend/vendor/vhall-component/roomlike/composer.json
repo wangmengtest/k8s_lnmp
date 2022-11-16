@@ -1,0 +1,19 @@
+{
+    "name": "vhall-component/roomlike",
+    "description": "点赞组件",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "刘祥亮",
+            "email": "xiangliang.liu@vhall.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload" : {
+        "psr-4" : {
+            "vhallComponent\\roomlike\\": "src"
+        }
+    },
+    "require": {}
+}

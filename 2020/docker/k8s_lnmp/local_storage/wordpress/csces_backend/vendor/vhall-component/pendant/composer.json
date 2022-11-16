@@ -1,0 +1,19 @@
+{
+    "name": "vhall-component/pendant",
+    "description": "挂件组件",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "欧骏",
+            "email": "jun.ou@vhall.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload" : {
+    "psr-4" : {
+        "vhallComponent\\pendant\\": "src"
+    }
+}
+}

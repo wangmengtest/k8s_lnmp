@@ -1,0 +1,13 @@
+{
+    "name": "vhall-component/language-pack",
+    "description": "组件语言包",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload" : {
+      "psr-4" : {
+        "vhallComponent\\language-pack\\": "src"
+      }
+    }
+}

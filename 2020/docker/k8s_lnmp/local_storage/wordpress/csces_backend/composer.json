@@ -1,0 +1,91 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.0",
+        "aliyuncs/oss-sdk-php": "v2.4.1",
+        "fideloper/proxy": "4.4.1",
+        "fruitcake/laravel-cors": "v2.0.4",
+        "guzzlehttp/guzzle": "^7.3",
+        "laravel/framework": "v8.44.0",
+        "laravel/tinker": "v2.6.1",
+        "phpoffice/phpspreadsheet": "1.18.0",
+        "predis/predis": "v1.1.7",
+        "vhall-component/access": "3.5.0",
+        "vhall-component/account": "3.5.0",
+        "vhall-component/action": "3.5.0",
+        "vhall-component/admin": "3.5.0",
+        "vhall-component/anchor-manage": "3.5.0",
+        "vhall-component/chat": "3.5.0",
+        "vhall-component/common": "3.5.0",
+        "vhall-component/config": "3.5.0",
+        "vhall-component/cut": "3.5.0",
+        "vhall-component/decouple": "dev-master",
+        "vhall-component/document": "3.5.0",
+        "vhall-component/export": "3.5.0",
+        "vhall-component/filter-word": "3.5.0",
+        "vhall-component/language-pack": "dev-master",
+        "vhall-component/menu": "3.5.0",
+        "vhall-component/paas": "3.5.1",
+        "vhall-component/perfctl": "3.5.0",
+        "vhall-component/publicforward": "3.5.0",
+        "vhall-component/record": "3.5.1",
+        "vhall-component/room": "3.5.4",
+        "vhall-component/sms": "3.5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Vss\\": "vss/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        },
+        "classmap": [
+            "library/Sms",
+            "library/VhallDisk"
+        ],
+        "files": [
+            "library/Helper.php",
+            "library/Sms.php",
+            "config/deprecated.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan generator:build --ansi",
+            "@php artisan generator:publish --ansi",
+            "@php -r \"exec('rm -rf '. __DIR__.'/vendor/vhall-component/language-pack/.git');\""
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ],
+        "code-fmt": "./vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --config .php_cs"
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

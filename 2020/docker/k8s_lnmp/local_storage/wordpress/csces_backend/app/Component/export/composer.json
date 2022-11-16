@@ -1,0 +1,19 @@
+{
+  "name": "vhall-component/export",
+  "description": "异步导出组件",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "杨金",
+      "email": "jin.yang@vhall.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload" : {
+    "psr-4" : {
+      "vhallComponent\\export\\": "src"
+    }
+  },
+  "require": {}
+}

@@ -1,0 +1,19 @@
+{
+  "name": "vhall-component/question",
+  "description": "问卷组件",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "刘祥亮",
+      "email": "xiangliang.liu@vhall.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload" : {
+    "psr-4" : {
+      "vhallComponent\\question\\": "src"
+    }
+  },
+  "require": {}
+}

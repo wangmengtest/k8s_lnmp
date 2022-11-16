@@ -1,0 +1,19 @@
+{
+  "name": "vhall-component/record",
+  "description": "回放组件",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "刘祥亮",
+      "email": "xiangliang.liu@vhall.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload" : {
+    "psr-4" : {
+      "vhallComponent\\record\\": "src"
+    }
+  },
+  "require": {}
+}

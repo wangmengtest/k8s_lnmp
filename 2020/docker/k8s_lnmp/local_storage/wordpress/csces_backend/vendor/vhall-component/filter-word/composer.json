@@ -1,0 +1,19 @@
+{
+    "name": "vhall-component/filter-word",
+    "description": "敏感词组件回收",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "王明",
+            "email": "ming.wang@vhall.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload" : {
+    "psr-4" : {
+        "vhallComponent\\filterWord\\": "src"
+    }
+}
+}

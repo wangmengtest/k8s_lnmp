@@ -1,0 +1,18 @@
+{
+  "login_view_prompt_nickname": "请输入昵称",
+  "login_view_action_get_code": "获取验证码",
+  "login_view_error_invalid_nickname_empty": "昵称不能为空",
+  "login_view_error_invalid_nickname": "昵称包含特殊字符",
+  "login_view_error_invalid_nickname_length": "长度不超过16个字符",
+  "login_view_error_invalid_phone_empty": "手机号不能为空",
+  "login_view_error_invalid_phone": "手机号格式不正确",
+  "login_view_error_invalid_code_empty": "验证码不能为空",
+  "login_view_prompt_phone": "请输入手机号",
+  "login_view_prompt_code": "请输入验证码",
+  "login_view_action_sign_in": "登录",
+  "login_view_send_msg_success": "发送成功",
+  "login_view_phone_login": "手机登录",
+  "mine_clear_cache": "清除缓存",
+  "main_list_viewer": "我是观众"
+
+}

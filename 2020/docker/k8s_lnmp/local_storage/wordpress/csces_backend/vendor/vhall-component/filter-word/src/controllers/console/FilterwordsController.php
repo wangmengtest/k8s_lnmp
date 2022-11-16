@@ -1,0 +1,132 @@
+<?php
+
+namespace vhallComponent\filterWord\controllers\console;
+
+use App\Constants\ResponseCode;
+use vhallComponent\decouple\controllers\BaseController;
+use vhallComponent\common\services\UploadFile;
+use vhallComponent\filterWord\constants\FilterwordsConstant;
+
+class FilterwordsController extends BaseController
+{
+    /**
+     * 列表
+     */
+    public function listAction()
+    {
+        $type     = $this->getParam('type', 1);//1商家  2公共
+        $search   = $this->getParam('search');
+        $ilId     = $this->getParam('il_id', 0);
+        $page     = $this->getParam('page', 1);
+        $pageSize = $this->getParam('pagesize', 10);
+
+        $filterWords = vss_service()->getFilterWordsService()
+            ->list($search, $page, $pageSize, $type, $ilId, $this->accountInfo['account_id']);
+        $this->success($filterWords);
+    }
+
+    /**
+     * 添加敏感词
+     *
+     *
+     */
+    public function createAction()
+    {
+        $filterWord = vss_service()->getFilterWordsService()
+            ->create($this->getParam(), $this->accountInfo['account_id'], $this->accountInfo['account_id']);
+        $this->success($filterWord ?? []);
+    }
+
+    /**
+     * 修改敏感词
+     *
+     *
+     */
+    public function updateAction()
+    {
+        $filterWord = vss_service()->getFilterWordsService()
+            ->update($this->getParam(), $this->accountInfo['account_id'], $this->accountInfo['account_id']);
+        $this->success($filterWord ?? []);
+    }
+
+    /**
+     * 删除敏感词
+     *
+     *
+     */
+    public function deleteAction()
+    {
+        $filterWord = vss_service()->getFilterWordsService()->delete($this->getParam());
+        $this->success($filterWord ?? []);
+    }
+
+    /**
+     * 敏感词模板
+     *
+     * @author  jin.yang@vhall.com
+     * @date    2020-03-13
+     */
+    public function templateAction()
+    {
+        //Excel文件名
+//        $fileName = '敏感词模板';
+        $fileName = "FilterWord" . date('YmdHis');
+        vss_service()->getExportProxyService()->init($fileName)->putRow([FilterwordsConstant::TEMPLATE])->download();
+    }
+
+    /**
+     * 导入敏感词
+     *
+     *
+     * @author   ming.wang@vhall.com
+     * @uses     wang-ming
+     */
+    public function importAction()
+    {
+        // 接收上传文件
+        $file = new UploadFile('filterwords');
+        $ilId = $this->getParam('il_id', 0);
+        if ($file->file == false) {
+            $this->fail(ResponseCode::EMPTY_FILE);
+        }
+
+        // 上传文件
+        $extension = strtolower($file->getClientOriginalExtension());
+        if (UploadFile::checkType('exel', $extension) === false) {
+            $this->fail(ResponseCode::TYPE_INVALID_UPLOAD);
+        }
+
+        $result = vss_service()->getFilterWordsService()
+            ->importFile(
+                $file,
+                $extension,
+                $this->accountInfo['account_id'],
+                $ilId,
+                $this->accountInfo['account_id']
+            );
+        $this->success($result ?? []);
+    }
+
+    /**
+     * 导出已发送的敏感词
+     *
+     *
+     * @author   ming.wang@vhall.com
+     * @uses     wang-ming
+     */
+    public function exportSendFilterWordsAction()
+    {
+        vss_validator($this->getParam(), [
+            'il_id' => 'required|integer',
+        ]);
+
+        $ilId      = $this->getParam('il_id');
+        $beginTime = $this->getParam('begin_time', '2021-06-01');
+        $endTime   = $this->getParam('end_time', date('Y-m-d'));
+        $accountId = $this->accountInfo['account_id'];
+        $fileName  = 'FilterwordSendList' . date('YmdHis') . $accountId;
+        vss_service()->getFilterWordsService()
+            ->exportMessage($ilId, $accountId, $fileName, $beginTime, $endTime);
+        $this->success([]);
+    }
+}
